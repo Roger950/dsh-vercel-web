@@ -1,0 +1,9 @@
+# Explicit opt-in deployment: installing this bundle selects both providers.
+# Uninstall restores the underlying web configuration; user-layer overrides win.
+- id: web
+  config:
+    searchProvider: vercel-deepseek-search
+    fetchProvider: vercel-deepseek-fetch
+- insert:
+    - id: vercel-web
+      name: dsh-vercel-web

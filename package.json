@@ -1,0 +1,80 @@
+{
+  "name": "dsh-vercel-web",
+  "version": "0.1.0",
+  "description": "Native DeepSeek Harness search and fetch providers backed by Vercel AI Gateway.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./src/host/index.js",
+  "exports": {
+    ".": "./src/host/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/host",
+    "src/shared",
+    "lib/client.js",
+    "scripts/live.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:live": "node scripts/live.mjs",
+    "prepack": "npm run build && npm run check"
+  },
+  "dependencies": {
+    "@ai-sdk/gateway": "4.0.146",
+    "ai": "7.0.173"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.2 <5",
+    "@deepseek-ai/dsh-web": ">=0.1.5-rc.3 <1",
+    "@deepseek-ai/schemastery": ">=3.18.2 <4"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.1.0",
+    "@deepseek-ai/dsh-api-gateway": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-credentials": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-settings": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-typert-registry": "0.2.2-rc.1",
+    "@deepseek-ai/dsh-web": "0.2.2-rc.1",
+    "@deepseek-ai/schemastery": "3.19.0",
+    "esbuild": "0.28.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "vercel",
+    "ai-gateway",
+    "web-search",
+    "web-fetch"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
