@@ -7,4 +7,4 @@
 - Chinese/English settings card and carrier-neutral test/credential methods.
 - Fixed official endpoint, single-step requests and disabled automatic retries.
 - Isolated Host, SDK transport, privacy and lifecycle tests.
-- No public release or daily Desktop-profile installation performed.
+- Published to GitHub at github.com/Roger950/dsh-vercel-web; no npm release and no daily Desktop-profile installation performed.

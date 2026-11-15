@@ -87,4 +87,4 @@ node scripts/preview.mjs --live
 
 无遥测、无后台模型调用。查询词或 URL 会发送给 Vercel 及其上游服务。普通 Harness 工具结果仍可能按 Harness 自身设置写入会话历史。
 
-此版未公开发布。发布前补齐真实验收、确认 npm 名称可用性、添加最终仓库信息并检查包内容。没有擅自创建 GitHub 仓库或 npm 发布记录。许可证为 MIT，参考及依赖见 `THIRD_PARTY_NOTICES.md`。
+此版已发布到 [github.com/Roger950/dsh-vercel-web](https://github.com/Roger950/dsh-vercel-web)。已执行的检查与待验证项见 `VALIDATION.md`；真实 API 访问和完整桌面版验收仍未完成。尚未发布到 npm。许可证为 MIT，参考及依赖见 `THIRD_PARTY_NOTICES.md`。

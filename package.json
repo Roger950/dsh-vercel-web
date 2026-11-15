@@ -74,6 +74,11 @@
     "web-search",
     "web-fetch"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roger950/dsh-vercel-web.git"
+  },
+  "homepage": "https://github.com/Roger950/dsh-vercel-web#readme",
   "publishConfig": {
     "access": "public"
   }

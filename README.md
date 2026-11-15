@@ -88,6 +88,6 @@ Before removing the plugin, select the previous Search provider and `http` (or y
 
 No telemetry or background model requests. The host sends the query or URL to Vercel and its upstream services. UI probes are explicit actions. SDK exceptions, request headers and unfiltered provider metadata are never logged or forwarded. The plugin keeps only bounded usage metadata in memory; Harness itself can retain normal conversation tool results according to its own settings.
 
-This build has not been published. Before publishing: complete `VALIDATION.md`, confirm Desktop compatibility, check `npm pack --dry-run`, confirm name availability, add the final repository metadata, and run the secret/package-content checks. No repository URL or maintainer identity is fabricated in the manifest.
+This build is published at [github.com/Roger950/dsh-vercel-web](https://github.com/Roger950/dsh-vercel-web). `VALIDATION.md` records executed checks and pending qualification; live API access and the full Desktop smoke test remain unverified. npm publication has not been performed.
 
 MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for references and dependencies.
